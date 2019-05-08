@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+       <title>
+            Hello | Boostrap
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>          
+    </head>
+    <body>
+        <!--Page heading-->
+        <div class='page-header'>
+            Welcome to Bootstrap
+            <div class='navbar'>
+                <ul class='nav navbar'>
+                    <li><a href='#'>Home</a></li>
+                    <li><a href='#'>About us</a></li>
+                    <li><a href='#'>Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Body container-->
+        <div class='container'>
+            <div class='col-md-4'>
+                Hello how r u 
+            </div>
+            <div class='col-md-4'>
+                    Welcome to bootstrap
+            </div>
+            <div class='col-md-2'>
+                I might be sqeezed a bit
+            </div>
+            <div class='col-md-2'>
+                I feel suffocated
+            </div>
+            <div class='row'>
+                Hello there I have ample space
+            </div>
+            <div class='col-sm-4'>
+                I feel stressed .... in here
+            </div>
+            <div class='col-sm-8'>
+                Oops gotta go .... still lot to learn 
+            </div>
+            <div>
+                <input type="button" value='Save' class='btn btn-primary'/>
+                <input type="button" value='Edit' class='btn btn-warning'/>
+                <input type="button" value='Delete' class='btn btn-danger'/>
+                <input type="button" value='Load' class='btn btn-info'/>
+            </div>
+        </div>
+        <div class='col-sm-6'>
+        <form>
+            <div class='form-row'>
+                <label for='name'>Name</label>
+                <input type='text' class='form-control' id='name' name='name'/>
+                </div>
+                <div class='form-group row'>
+                <label for='email'>Email</label>
+                <input type='email' class='form-control' id='email' name='email'/>
+                </div>
+           
+                <label for='pass'>Password</label>
+                <input type='password' class='form-control' id='pass' name='pass'/>
+                <label for='gender'>Gender</label>
+                <select class='form-control'>
+                    <option value='-1'>-select-</option>
+                    <option value='0'>Male</option>
+                    <option value='1'>Female</option>
+                </select>
+                <input type="submit" class='btn btn-primary' value='Save'/>
+                <input type="reset" class='btn btn-warning' value='Refresh'/>
+            </div>
+        </form>     
+        </div>
+    </body>
+</html>
+<style>
+div{
+border: 1px solid;    
+}
+</style>

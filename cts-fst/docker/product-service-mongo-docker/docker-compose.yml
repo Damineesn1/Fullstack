@@ -1,0 +1,34 @@
+version: "3"
+services: 
+  app:
+    #container_name: app
+    image: product-service
+    deploy:
+      mode: replicated # whether to create replications or not
+      replicas: 2 # how many containers should be spanned
+      resources:
+        limits:
+          cpus: "0.1" # 0.1 refers to 10% of cpu usage
+          #memory: 50M # 50mb of ram being allocated to the system
+      restart_policy:
+        condition: on-failure # enable auto restart in case of container failures or issues
+    ports:
+      - "1112:1112" # pass the ports to the Dockerfile
+    links: # dependent containers we can have multiple ones here
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
+# start docker compose
+# docker-compose up
+# stop docker compose
+# docker-compose down
+# 1. it will automatically build the required images
+# 2. start the containers
+# 3. create the linking between containers
+# 4. it shall use Dockerfile internally no need to execute docker build command now
+# 5. This file shall pull the mongo image & spawn the container for it at 27017
+# 6. This file shall build the image for product-service & start the container at 5233
+# 7. This file shall create a link between mongo --> product-service containers for communications
